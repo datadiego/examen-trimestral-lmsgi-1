@@ -36,9 +36,9 @@
             "Sal, azúcar, aceite", 
             "Albahaca, orégano"
         ]
-        
+
         const ingredientesLista = document.createElement('ul');
-        receta.ingredientes.forEach(ingrediente => {
+        ingredientes.forEach(ingrediente => {
             const li = document.createElement('li');
             li.textContent = ingrediente;
             ingredientesLista.appendChild(li);
@@ -46,7 +46,7 @@
         document.body.appendChild(ingredientesLista);
 
         const instruccionesDisplay = document.createElement('p');
-        instruccionesDisplay.textContent = "Instrucciones: " + receta.instrucciones.join(" ");
+        instruccionesDisplay.textContent = "Instrucciones";
         document.body.appendChild(instruccionesDisplay);
 
         const instrucciones = [
@@ -57,7 +57,7 @@
             "Hornear a 220°C durante 15-20 min."
         ]
         const instruccionesLista = document.createElement('ol');
-        receta.instrucciones.forEach(instruccion => {
+        instrucciones.forEach(instruccion => {
             const li = document.createElement('li');
             li.textContent = instruccion;
             instruccionesLista.appendChild(li);
