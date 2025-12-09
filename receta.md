@@ -19,6 +19,7 @@ Ingredientes
 - Albahaca, orégano
 
 Instrucciones
+
 1. Mezclar levadura, azúcar y agua. Dejar reposar 10 min.
 2. Añadir harina, sal y aceite. Amasar y dejar reposar 1 hora.
 3. Preparar la salsa con tomate, ajo, orégano, sal y pimienta.
