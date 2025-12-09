@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de pizza casera sin html</title>
+</head>
+<body>
+    <script>
+        const receta = {
+            titulo: "Receta de Pizza Casera",
+            dificultad: "Media",
+            tiempoPreparacion: "1 hora 30 minutos",
+            porciones: 4,
+            ingredientes: ["500 g harina", "325 ml agua", "7 g levadura", "200 g tomate triturado", "200 g queso mozzarella", "Sal, azúcar, aceite", "Albahaca, orégano"],
+            instrucciones: [
+                "Mezclar levadura, azúcar y agua. Dejar reposar 10 min.",
+                "Añadir harina, sal y aceite. Amasar y dejar reposar 1 hora.",
+                "Preparar la salsa con tomate, ajo, orégano, sal y pimienta.",
+                "Estirar la masa, cubrir con salsa y poner el queso y la albahaca.",
+                "Hornear a 220°C durante 15-20 min."
+            ]
+        }
+
+        const tituloDisplay = document.createElement('h1');
+        tituloDisplay.textContent = receta.titulo;
+        document.body.appendChild(tituloDisplay);
+
+        const dificultadDisplay = document.createElement('p');
+        dificultadDisplay.textContent = "Dificultad: " + receta.dificultad;
+        document.body.appendChild(dificultadDisplay);
+
+        const tiempoDisplay = document.createElement('p');
+        tiempoDisplay.textContent = "Tiempo de preparación: " + receta.tiempoPreparacion
+        document.body.appendChild(tiempoDisplay);
+
+        const porcionesDisplay = document.createElement('p');
+        porcionesDisplay.textContent = "Porciones: " + receta.porciones;
+        document.body.appendChild(porcionesDisplay);
+
+        const ingredientesTitle = document.createElement('p');
+        ingredientesTitle.textContent = "Ingredientes";
+        document.body.appendChild(ingredientesTitle);
+
+        const ingredientesLista = document.createElement('ul');
+        receta.ingredientes.forEach(ingrediente => {
+            const li = document.createElement('li');
+            li.textContent = ingrediente;
+            ingredientesLista.appendChild(li);
+        });
+        document.body.appendChild(ingredientesLista);
+
+        const instruccionesDisplay = document.createElement('p');
+        instruccionesDisplay.textContent = "Instrucciones: " + receta.instrucciones.join(" ");
+        document.body.appendChild(instruccionesDisplay);
+
+        const instruccionesLista = document.createElement('ol');
+        receta.instrucciones.forEach(instruccion => {
+            const li = document.createElement('li');
+            li.textContent = instruccion;
+            instruccionesLista.appendChild(li);
+        });
+        document.body.appendChild(instruccionesLista);
+    </script>
+</body>
+</html>

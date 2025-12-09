@@ -34,9 +34,11 @@ Convierte el archivo markdown que has creado a su HTML equivalente, el documento
 
 Describe brevemente a continuación los pasos que has seguido para realizar la conversión:
 
----
-
----
+1. Ejecuto el comando `pandoc receta.md -o ejercicio2.html` para generar un html básico a partir de mi md.
+2. Genero una estructura básica con `! + tab` en VSCode dentro de `ejercicio2.html`.
+3. Selecciono el contenido generado por pandoc y con `alt` lo muevo dentro del `body` de la estructura básica.
+4. Modifico el título del `head` para que sea más descriptivo.
+5. Formateo el documento para que sea más legible.
 
 ## Pregunta 3: HTML sin usar HTML (2 Puntos)
 
@@ -58,23 +60,90 @@ Crea un archivo `html` llamado `eleccion.html` que contenga:
 Responde brevemente a las siguientes preguntas:
 
 1. ¿Qué es una etiqueta en HTML? Dame 3 ejemplos que no se mencionen o se usen en preguntas del examen.
+
+Una etiqueta HTML es un elemento básico para estructurar y definir el contenido de una página web. Suelen tener la siguiente estructura:
+
+```
+<tag de apertura atributo="mas info">Contenido</tag de cierre>
+```
+
+Algunos tags que no se han usado antes en el examen:
+
+- `<form>`
+- `<a>`
+- `<code>`
+
 2. ¿Qué es un atributo? Dame 3 ejemplos junto a sus etiquetas correspondientes.
+
+Un atributo añade información adicional a un tag HTML. En algunos casos es una parte obligatoria para que el tag cumpla su función:
+
+- `<a href="https://www.google.com">Google</a>`
+- `<img src="imagen.jpg" alt="Descripción de la imagen">`
+- `<button onclick="miFuncion()">Clic aquí</button>`
+
 3. ¿Como reconoces una etiqueta de apertura y una de cierre?
+
+Las etiquetas de apertura no tienen una barra inclinada `/` después de abrir la etiqueta:
+
+```
+<tag>  --> Etiqueta de apertura
+</tag> --> Etiqueta de cierre
+```
+
 4. ¿Para qué se usa la etiqueta `<head>` en un documento HTML?
+
+Añade metadatos e información adicional para el navegador, es información que no se muestra directamente al usuario en la página web.
+
 5. ¿Qué es un `id`? ¿Y una `class`? ¿En qué se diferencian?
+
+Ambos sirven para identificar elementos HTML y capturarlos luego en *CSS* o *JavaScript*.
+
+Los `id` son únicos, no deberiamos repetirlos en la misma página.
+
+Las `class` pueden repetirse en varios elementos, y sirven para agruparlos bajo una misma categoría o estilo.
+
 6. ¿Qué diferencia hay entre un `<div>` y un `<span>`?
+
+Ambos son contenedores genéricos, pero `<div>` es un contenedor de bloque, esto hace que el contenido aparezca en una nueva línea, mientras que `<span>` es un contenedor de línea, haciendo que se vea en la misma línea que el anterior contenido.
+
 7. ¿Qué diferencia hay entre `let` y `const` en JavaScript?
+
+Ambos nos permiten declarar variables.
+
+`let` nos deja reasignar un nuevo valor a la variable posteriormente.
+`const` es inmutable, no podemos cambiar su valor una vez asignado.
+
+Ambos son limitados al bloque donde se declaran.
+
 8. ¿Qué es el DOM en JavaScript?
+
+Es una representación estructurada del documento HTML, un objeto al que podemos acceder y manipular mediante JavaScript.
+
+Se accede mediante el objeto global `document`.
+
 9. ¿Como recorrerías el siguiente array en JavaScript para mostrar cada uno de sus elementos en la consola?
 
 ```javascript
 const frutas = ['manzana', 'plátano', 'cereza', 'naranja', 'uva'];
+
+for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i]);
+}
+
+frutas.forEach(fruta => {
+    console.log(fruta);
+});
+
+frutas.forEach(fruta => console.log(fruta));
 ```
 
 10. Sustituye el nombre de la siguiente función JavaScript por una palabra mas apropiada a su funcionalidad:
 
 ```javascript
-function miFuncion(a) {
+function choose(a) {
     return a[Math.floor(Math.random() * a.length)];
 }
 ```
+
+> Otros nombres apropiados podrían ser `getRandomElement`, `selectRandomItem`, `pickRandomValue`, `seleccionarDesdeArray`, etc.
+
